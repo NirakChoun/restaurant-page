@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utilities */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.container {
+    width: 85%;
+    height: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute; 
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.link {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: relative;
+    color: #FFD700;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #FFD700;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #FFD700;
+}
+
+.small-text {
+    font-size: 1.1rem;
+}
+
+body {
+    height: 100vh;
+    font-family: "Fredoka", sans-serif;
+    background-size: cover;
+    position: relative;
+}
+
+.brand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.description {
+    color: white;
+    text-align: center;
+    width: 75%;
+    font-size: 1.5rem;
+    letter-spacing: 1.5;
+}
+
+#gallery {
+    display: flex;
+    gap: 40px;
+}
+
+#gallery img {
+    box-shadow: rgba(255, 215, 0, 0.25) 0px 54px 55px, 
+                rgba(255, 215, 0, 0.12) 0px -12px 30px, 
+                rgba(255, 215, 0, 0.12) 0px 4px 6px, 
+                rgba(255, 215, 0, 0.17) 0px 12px 13px, 
+                rgba(255, 215, 0, 0.09) 0px -3px 5px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.food {
+    color: white;
+    text-align: center;
+}
+
+#info {
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
